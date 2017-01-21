@@ -1,4 +1,5 @@
 Library/
 Library/*
+/[Tt]emp/
 Assets/Photon Unity Networking/Demos/*
 iphoneBuildTest/*
