@@ -2,8 +2,8 @@ using UnityEngine;
 using System.Collections;
 
 public class MotionDetect : MonoBehaviour {
-    public float coolDown=1f;
-    public float previousCoolDown=.5f;
+    public const float coolDown=1f;
+    public const float previousCoolDown=.5f;
 
 
     public float previousWaveTime = 0f;
@@ -33,16 +33,16 @@ public class MotionDetect : MonoBehaviour {
         
 
 
-        if (isReady&&Mathf.Abs(Input.gyro.userAcceleration.z) >1.5f)
+        if (isReady&&Mathf.Abs(Input.gyro.userAcceleration.x) >1.5f)
         {
-            if (Input.gyro.userAcceleration.z > 0 && previousPositive)
+            if (Input.gyro.userAcceleration.x > 0 && previousPositive)
                 return;
 
-            if (Input.gyro.userAcceleration.z < 0 && !previousPositive)
+            if (Input.gyro.userAcceleration.x < 0 && !previousPositive)
                 return;
             TouchJump.instance.Jump();
-                Debug.Log("Wave " + Input.gyro.userAcceleration.z+ " pre pos"+previousPositive);
-            previousPositive=Input.gyro.userAcceleration.z>0;
+                Debug.Log("Wave " + Input.gyro.userAcceleration.x+ " pre pos"+previousPositive);
+            previousPositive=Input.gyro.userAcceleration.x>0;
             previousWaveTime = 0f;
             isPreviousPassed=false;
         }

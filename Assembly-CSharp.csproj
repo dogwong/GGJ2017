@@ -198,7 +198,10 @@
      <Compile Include="Assets\Scripts\MotionDetect.cs" />
      <Compile Include="Assets\Scripts\PlayerNameInputField.cs" />
      <Compile Include="Assets\Scripts\PlayerNetworkManager.cs" />
+     <Compile Include="Assets\Scripts\ShakeCamera.cs" />
      <Compile Include="Assets\Scripts\TouchJump.cs" />
+     <Compile Include="Assets\Scripts\Wave\WaveMono.cs" />
+     <Compile Include="Assets\Scripts\Wave\WaveSize.cs" />
      <None Include="Assets\Photon Unity Networking\Demos\MarcoPolo-Tutorial\marcopolo-readme.txt" />
      <None Include="Assets\Photon Unity Networking\link.xml" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
