@@ -19,11 +19,11 @@ public class WaveMono : MonoBehaviour {
     public void SetupWave(WaveSize _waveSize)
     { 
         waveSize=_waveSize;
-        GetComponent<Rigidbody>().velocity = transform.forward * -6; 
-        switch (waveSize)
-        { 
+        GetComponent<Rigidbody>().velocity =  transform.forward * -6; 
+        //switch (waveSize)
+        //{ 
             
-        }
+        //}
     }
     void OnTriggerEnter(Collider other)
     {

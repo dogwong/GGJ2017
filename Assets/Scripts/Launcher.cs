@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Launcher : Photon.PunBehaviour {
@@ -66,7 +66,7 @@ public class Launcher : Photon.PunBehaviour {
 	public override void OnJoinedRoom()
 	{
 		Debug.Log("DemoAnimator/Launcher: OnJoinedRoom() called by PUN. Now this client is in a room.");
-		if (PhotonNetwork.room.PlayerCount == 1)
+        if (PhotonNetwork.room.PlayerCount == 1)
 		{
 			Debug.Log("We load the 'Room for 1' ");
 			PhotonNetwork.LoadLevel("Level");
