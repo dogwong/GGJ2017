@@ -9,13 +9,13 @@ public class GameManager : Photon.PunBehaviour {
 	public GameObject team2Player;
 	// Use this for initialization
 	void Start () {
-		if (PhotonNetwork.playerName == "player1" || PhotonNetwork.playerName == "player2") {
+		/*if (PhotonNetwork.playerName == "player1" || PhotonNetwork.playerName == "player2") {
 			PhotonNetwork.Instantiate (this.team1Player.name, new Vector3 (0f, 5f, 0f), Quaternion.identity, 0);
 			GameObject.FindGameObjectWithTag ("Team1Camera").GetComponent<Camera>().enabled=true;
 		} else {
 			PhotonNetwork.Instantiate (this.team2Player.name, new Vector3 (0f, 5f, 0f), Quaternion.identity, 0);
 			GameObject.FindGameObjectWithTag ("Team2Camera").GetComponent<Camera>().enabled=true;
-		}
+		}*/
 
 	}
 	

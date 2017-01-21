@@ -5,7 +5,9 @@ public class PlayerNetworkManager : Photon.MonoBehaviour {
 
 	void Awake(){
 		if (photonView.isMine) {
-			Debug.Log ("hi");
+			
+		} else {
+			
 		}
 	}
 	// Use this for initialization
