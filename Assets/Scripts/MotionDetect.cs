@@ -6,6 +6,7 @@ public class MotionDetect : MonoBehaviour {
     public const float coolDown=1f;
     public const float previousCoolDown=.5f;
 
+    public GameObject waves;
 
     public float previousWaveTime = 0f;
     public bool isJumpReady = false;
@@ -71,6 +72,7 @@ public class MotionDetect : MonoBehaviour {
                 float lowestY = 0.0f;
                 float total = 0.0f;
                 int qty = 0;
+                float avg = (total / qty);
                 foreach (float f in listLAcceYhistory) {
                     if (f < lowestY) lowestY = f;
                     total += f;
@@ -80,7 +82,15 @@ public class MotionDetect : MonoBehaviour {
                 Debug.LogWarning("SLASH! length = " + listLAcceYhistory.Count + "\tlowest = " + lowestY + "\tavg = " + (total / qty));
                 Attacking = false;
                 //GameObject w = PhotonNetwork.Instantiate(this.waves.name, transform.position, Quaternion.identity, 0);
-                //w.GetComponent<WaveMono>().SetupWave(waveSize);
+                //WaveSize ws;
+                //if (avg < 1.5f) {
+                //    ws = WaveSize.Weak;
+                //} else if (avg < 2.5f) {
+                //    ws = WaveSize.Mild;
+                //} else {
+                //    ws = WaveSize.Huge;
+                //}
+                //w.GetComponent<WaveMono>().SetupWave(ws);
 
             } else {
                 if (listLAcceYhistory[listLAcceYhistory.Count - 1] != Input.gyro.userAcceleration.y)
