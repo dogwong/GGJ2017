@@ -44,6 +44,7 @@ public class PlayerNetworkManager : Photon.MonoBehaviour
 
         if (photonView.isMine && (PhotonNetwork.player.ID == 1 || PhotonNetwork.player.ID == 3))
         {
+            //GameObject.FindGameObjectsWithTag("Team1Member")[0];
             GetComponent<TouchJump>().enabled = true;
             GameObject[] backs = GameObject.FindGameObjectsWithTag("Back");
             for (int i = 0; i < backs.Length; i++)

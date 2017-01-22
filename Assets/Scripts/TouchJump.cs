@@ -42,6 +42,7 @@ public class TouchJump : MonoBehaviour {
             
             GameObject w = PhotonNetwork.Instantiate(this.waves.name,transform.position, transform.rotation, 0);
                  w.GetComponent<WaveMono>().SetupWave(waveSize);
+                 Debug.Log("Attack");
                 s.Attack();
             }
         }

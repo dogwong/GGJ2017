@@ -45,8 +45,8 @@ public class InitPlayer : MonoBehaviour {
 		else if(index == 4)
 		{
 			GameObject player = PhotonNetwork.Instantiate("Team2Player4",
-				spawnPoints[index].position,
-				spawnPoints[index].rotation,
+				spawnPoints[0].position,
+				spawnPoints[0].rotation,
 				0);
 			//GameObject.FindGameObjectWithTag("Team2Camera").GetComponent<Camera>().enabled = true;
 			teamTwoCam.SetActive(true); 

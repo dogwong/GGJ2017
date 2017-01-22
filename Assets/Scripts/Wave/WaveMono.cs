@@ -41,6 +41,7 @@ public class WaveMono : MonoBehaviour {
             {
                 ShakeCamera.instance.Shake();
             }
+            //other.GetComponent<SpineTest>().
             GameManager.instance.TeamTakeDamage(isTeamOne, 1);
         }
         Debug.Log("hitting " + other.name);

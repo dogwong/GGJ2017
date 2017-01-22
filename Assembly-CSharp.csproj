@@ -139,7 +139,6 @@
      <Compile Include="Assets\PhotonChatApi\ChatState.cs" />
      <Compile Include="Assets\PhotonChatApi\ChatUserStatus.cs" />
      <Compile Include="Assets\PhotonChatApi\IChatClientListener.cs" />
-     <Compile Include="Assets\Resources\Characters\C1(Back)\SpineTest.cs" />
      <Compile Include="Assets\Scripts\CharacterMono.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Helper.cs" />
@@ -150,6 +149,9 @@
      <Compile Include="Assets\Scripts\PlayerNameInputField.cs" />
      <Compile Include="Assets\Scripts\PlayerNetworkManager.cs" />
      <Compile Include="Assets\Scripts\ShakeCamera.cs" />
+     <Compile Include="Assets\Scripts\SpineA.cs" />
+     <Compile Include="Assets\Scripts\SpineB.cs" />
+     <Compile Include="Assets\Scripts\SpineTest.cs" />
      <Compile Include="Assets\Scripts\TouchJump.cs" />
      <Compile Include="Assets\Scripts\Wave\WaveMono.cs" />
      <Compile Include="Assets\Scripts\Wave\WaveSize.cs" />
