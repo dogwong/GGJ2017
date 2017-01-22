@@ -81,23 +81,23 @@ public class MotionDetect : MonoBehaviour {
                 }
                 Debug.LogWarning("SLASH! length = " + listLAcceYhistory.Count + "\tlowest = " + lowestY + "\tavg = " + (total / qty));
                 Attacking = false;
-                //GameObject w = PhotonNetwork.Instantiate(this.waves.name, transform.position, Quaternion.identity, 0);
-                //WaveSize ws;
-                //if (avg < 1.5f) {
-                //    ws = WaveSize.Weak;
-                //} else if (avg < 2.5f) {
-                //    ws = WaveSize.Mild;
-                //} else {
-                //    ws = WaveSize.Huge;
-                //}
-                //w.GetComponent<WaveMono>().SetupWave(ws);
+                GameObject w = PhotonNetwork.Instantiate(this.waves.name, transform.position, Quaternion.identity, 0);
+                WaveSize ws;
+                if (avg < 2.0f) {
+                    ws = WaveSize.Weak;
+                } else if (avg < 3.0f) {
+                    ws = WaveSize.Mild;
+                } else {
+                    ws = WaveSize.Huge;
+                }
+                w.GetComponent<WaveMono>().SetupWave(ws);
 
             } else {
                 if (listLAcceYhistory[listLAcceYhistory.Count - 1] != Input.gyro.userAcceleration.y)
                     listLAcceYhistory.Add(Input.gyro.userAcceleration.y);
                 //Debug.Log(Input.gyro.userAcceleration.y);
             }
-        } else if (Input.gyro.userAcceleration.y >= 2.5f && !slashRecording) {
+        } else if (Input.gyro.userAcceleration.y >= 2.2f && !slashRecording) {
             slashRecording = true;
             listLAcceYhistory.Clear();
             listLAcceYhistory.Add(Input.gyro.userAcceleration.y);
