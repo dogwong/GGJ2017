@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 using UnityEngine;
+=======
+﻿using UnityEngine;
+>>>>>>> 36271bfabb5c44cc67a1733577195129b4fa9bf7
 using System.Collections;
 using Spine.Unity;
 
@@ -13,10 +17,13 @@ public class SpineTest : MonoBehaviour {
 	[SpineAnimation]
 	public string attack;
 
+<<<<<<< HEAD
     public enum AnimationState { 
         Attack01=0,Attack02=1,Hit=2,Idle_Fast=3,Idle_Slow=4,Jump=5
     }
 
+=======
+>>>>>>> 36271bfabb5c44cc67a1733577195129b4fa9bf7
 	void Start () {
 		skeletonAnimation = GetComponent<SkeletonAnimation> ();
 		skeletonAnimation.loop = true;
@@ -31,6 +38,7 @@ public class SpineTest : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+<<<<<<< HEAD
         
         if (Input.GetKeyUp(KeyCode.A))
         {
@@ -70,4 +78,14 @@ public class SpineTest : MonoBehaviour {
     {
         return skeletonAnimation.AnimationName == "Jump";
     }
+=======
+		if (Input.GetKeyUp(KeyCode.A)) {
+			skeletonAnimation.loop = true;
+			skeletonAnimation.AnimationName = attack;
+			PlayerNetworkManager.action = "attack";
+		} 
+	}
+
+		
+>>>>>>> 36271bfabb5c44cc67a1733577195129b4fa9bf7
 }
