@@ -11,20 +11,20 @@ public class TouchJump : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         instance = this;
+        //if (GameManager.isTeamOne())
+        //{ 
+            
+        //}
         //Debug.LogError(gameObject.name);
 	}
 
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetMouseButtonDown(0))
-        {
+        if (Input.GetKeyDown(KeyCode.D))
             Jump();
-        }
-        else if (Input.GetMouseButtonDown(0))
-        {
+        else if (Input.GetKeyDown(KeyCode.A))
             SendWave();
-        }
 	}
 
     public void SendWave()
@@ -40,9 +40,9 @@ public class TouchJump : MonoBehaviour {
             if(s.checkAnimationAvilable())
             {
             
-        GameObject w = PhotonNetwork.Instantiate(this.waves.name,transform.position, transform.rotation, 0);
-        w.GetComponent<WaveMono>().SetupWave(waveSize);
-                s.Jump();
+            GameObject w = PhotonNetwork.Instantiate(this.waves.name,transform.position, transform.rotation, 0);
+                 w.GetComponent<WaveMono>().SetupWave(waveSize);
+                s.Attack();
             }
         }
         
@@ -79,7 +79,7 @@ public class TouchJump : MonoBehaviour {
         SpineTest[] spineTests=GetComponentsInChildren<SpineTest>();
         for (int i = 0; i < spineTests.Length; i++)
         {
-            if (spineTests[i].enabled && spineTests[i].gameObject.GetActive())
+            if (spineTests[i].enabled && spineTests[i].gameObject.GetActive()&&spineTests[i].GetComponent<MeshRenderer>().enabled)
                 return spineTests[i];
         }
         return null;

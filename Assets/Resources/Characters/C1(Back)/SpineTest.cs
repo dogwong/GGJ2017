@@ -22,12 +22,12 @@ public class SpineTest : MonoBehaviour {
 		skeletonAnimation = GetComponent<SkeletonAnimation> ();
 		skeletonAnimation.loop = true;
 		skeletonAnimation.AnimationName = idle;
-		skeletonAnimation.state.Complete += delegate {
-			if (!checkAnimationAvilable()) {
-				skeletonAnimation.loop = true;
-				skeletonAnimation.AnimationName = idle;
-			}
-		};
+        //skeletonAnimation.state.Complete += delegate {
+        //    if (!checkAnimationAvilable()) {
+        //        skeletonAnimation.loop = true;
+        //        skeletonAnimation.AnimationName = idle;
+        //    }
+        //};
 	}
 	
 	// Update is called once per frame
