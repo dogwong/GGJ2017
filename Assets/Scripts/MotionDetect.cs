@@ -60,6 +60,11 @@ public class MotionDetect : MonoBehaviour {
                 for (int i = 0; i < listGyroYhistory.Count; i++) {
                     listGyroYhistory[i] = 0.0f;
                 }
+                TouchJump.instance.Jump();
+                Debug.Log("Wave " + Input.gyro.userAcceleration.x + " pre pos" + previousPositive);
+                previousPositive = Input.gyro.userAcceleration.x > 0;
+                previousWaveTime = 0f;
+                isPreviousPassed = false;
             }
         } else {
             if (listGyroYhistory.Count > 0) listGyroYhistory.Clear();
