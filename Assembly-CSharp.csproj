@@ -148,6 +148,7 @@
      <Compile Include="Assets\Scripts\MotionDetect.cs" />
      <Compile Include="Assets\Scripts\PlayerNameInputField.cs" />
      <Compile Include="Assets\Scripts\PlayerNetworkManager.cs" />
+     <Compile Include="Assets\Scripts\SetupPlayer.cs" />
      <Compile Include="Assets\Scripts\ShakeCamera.cs" />
      <Compile Include="Assets\Scripts\SpineA.cs" />
      <Compile Include="Assets\Scripts\SpineB.cs" />

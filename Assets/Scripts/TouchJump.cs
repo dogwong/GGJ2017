@@ -16,6 +16,9 @@ public class TouchJump : MonoBehaviour {
             
         //}
         //Debug.LogError(gameObject.name);
+
+
+
 	}
 
 	// Update is called once per frame

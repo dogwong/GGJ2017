@@ -39,48 +39,51 @@ public class PlayerNetworkManager : Photon.MonoBehaviour
         //    StartCoroutine("UpdateData");
         //}
 
+     
 
 
 
         if (photonView.isMine && (PhotonNetwork.player.ID == 1 || PhotonNetwork.player.ID == 3))
         {
-            //GameObject.FindGameObjectsWithTag("Team1Member")[0];
+            ////GameObject.FindGameObjectsWithTag("Team1Member")[0];
             GetComponent<TouchJump>().enabled = true;
-            GameObject[] backs = GameObject.FindGameObjectsWithTag("Back");
-            for (int i = 0; i < backs.Length; i++)
-            {
-                backs[i].GetComponent<MeshRenderer>().enabled = true;
-                Debug.Log(backs[i]);
-            }
+            //GameObject[] backs = GameObject.FindGameObjectsWithTag("Back");
+            //for (int i = 0; i < backs.Length; i++)
+            //{
+            //    if(backs[i].transform.parent.parent.GetComponent<PhotonView>().isMine)
+            //        backs[i].GetComponent<MeshRenderer>().enabled = true;
+            //    Debug.Log(backs[i]);
+            //}
         }
         else if (photonView.isMine && (PhotonNetwork.player.ID == 2 || PhotonNetwork.player.ID == 4))
         {
             GetComponent<TouchJump>().enabled = true;
-            GameObject[] backs = GameObject.FindGameObjectsWithTag("Back");
-            for (int i = 0; i < backs.Length; i++)
-            {
-                backs[i].GetComponent<MeshRenderer>().enabled = true;
-            }
+            //GameObject[] backs = GameObject.FindGameObjectsWithTag("Back");
+            //for (int i = 0; i < backs.Length; i++)
+            //{
+            //    if (backs[i].transform.parent.parent.GetComponent<PhotonView>().isMine)
+            //    backs[i].GetComponent<MeshRenderer>().enabled = true;
+            //}
         }
         else
         {
 
 
-            GameObject[] fronts = GameObject.FindGameObjectsWithTag("Front");
+            //GameObject[] fronts = GameObject.FindGameObjectsWithTag("Front");
 
-            for (int i = 0; i < fronts.Length; i++)
-            {
-                fronts[i].GetComponent<MeshRenderer>().enabled = true;
-            }
-            foreach (Transform child in transform)
-            {
-                Debug.Log("child: " + child.tag);
-                if (child.CompareTag("Front"))
-                {
-                    Debug.Log("child: " + child.tag);
-                    child.GetComponent<MeshRenderer>().enabled = false;
-                }
-            }
+            //for (int i = 0; i < fronts.Length; i++)
+            //{
+            //    fronts[i].GetComponent<MeshRenderer>().enabled = true;
+            //}
+            //foreach (Transform child in transform)
+            //{
+            //    Debug.Log("child: " + child.tag);
+            //    if (child.CompareTag("Front"))
+            //    {
+            //        Debug.Log("child: " + child.tag);
+            //        child.GetComponent<MeshRenderer>().enabled = false;
+            //    }
+            //}
 
             /*GameObject [] myTeam = GameObject.FindGameObjectsWithTag ("Team1Player");
             foreach (GameObject obj in myTeam) {
