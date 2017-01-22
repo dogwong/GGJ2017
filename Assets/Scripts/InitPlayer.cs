@@ -10,29 +10,48 @@ public class InitPlayer : MonoBehaviour {
 	void Start () {
 
 
-        int index = PhotonNetwork.player.ID - 1;
+        int index = PhotonNetwork.player.ID;
 
         Debug.Log(index);
-        if (index % 2 == 0)
+		if (index == 1)
         {
-            GameObject player = PhotonNetwork.Instantiate("Team1Player",
+            GameObject player = PhotonNetwork.Instantiate("Team1Player1",
                 spawnPoints[index].position,
                 spawnPoints[index].rotation,
                 0); 
-           
+			PhotonNetwork.playerName = "Player" + PhotonNetwork.player.ID;
             //GameObject.FindGameObjectWithTag("Team1Camera").GetComponent<Camera>().enabled = true;
            teamOneCam.SetActive(true);
         }
-        else
+		else if(index == 2)
         {
-            GameObject player = PhotonNetwork.Instantiate("Team2Player",
+			GameObject player = PhotonNetwork.Instantiate("Team2Player2",
                 spawnPoints[index].position,
                 spawnPoints[index].rotation,
                 0);
             //GameObject.FindGameObjectWithTag("Team2Camera").GetComponent<Camera>().enabled = true;
             teamTwoCam.SetActive(true); 
-            
-        }
+			PhotonNetwork.playerName = "Player" + PhotonNetwork.player.ID;
+		} else if (index == 3)
+		{
+			GameObject player = PhotonNetwork.Instantiate("Team1Player3",
+				spawnPoints[index].position,
+				spawnPoints[index].rotation,
+				0); 
+			PhotonNetwork.playerName = "Player" + PhotonNetwork.player.ID;
+			//GameObject.FindGameObjectWithTag("Team1Camera").GetComponent<Camera>().enabled = true;
+			teamOneCam.SetActive(true);
+		}
+		else if(index == 4)
+		{
+			GameObject player = PhotonNetwork.Instantiate("Team2Player4",
+				spawnPoints[index].position,
+				spawnPoints[index].rotation,
+				0);
+			//GameObject.FindGameObjectWithTag("Team2Camera").GetComponent<Camera>().enabled = true;
+			teamTwoCam.SetActive(true); 
+			PhotonNetwork.playerName = "Player" + PhotonNetwork.player.ID;
+		}
         Destroy(this);
 	}
 	

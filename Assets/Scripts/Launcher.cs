@@ -69,7 +69,7 @@ public class Launcher : Photon.PunBehaviour {
         if (PhotonNetwork.room.PlayerCount == 1)
 		{
 			Debug.Log("We load the 'Room for 1' ");
-			PhotonNetwork.LoadLevel("Level");
+			PhotonNetwork.LoadLevel("wave");
 		}
 	}
 }

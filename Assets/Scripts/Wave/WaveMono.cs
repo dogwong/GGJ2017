@@ -14,7 +14,7 @@ public class WaveMono : MonoBehaviour {
 	void Update () {
         waveStaying += Time.deltaTime;
         if (waveStaying >= destoryWaveTime)
-            Destroy(this);
+            Destroy(this.gameObject);
 	}
     public void SetupWave(WaveSize _waveSize)
     { 

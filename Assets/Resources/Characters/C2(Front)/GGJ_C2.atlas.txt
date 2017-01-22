@@ -1,0 +1,27 @@
+
+GGJ_C2.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BLeg
+  rotate: false
+  xy: 658, 770
+  size: 87, 210
+  orig: 87, 210
+  offset: 0, 0
+  index: -1
+FLeg
+  rotate: false
+  xy: 658, 770
+  size: 87, 210
+  orig: 87, 210
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 2, 2
+  size: 654, 978
+  orig: 654, 978
+  offset: 0, 0
+  index: -1

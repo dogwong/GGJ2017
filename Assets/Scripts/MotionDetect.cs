@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class MotionDetect : MonoBehaviour {
-    public const float coolDown=1f;
-    public const float previousCoolDown=.5f;
+    public const float coolDown = 1f;
+    public const float previousCoolDown = .5f;
 
     public GameObject waves;
 
@@ -21,21 +21,20 @@ public class MotionDetect : MonoBehaviour {
 
     public static bool Attacking = false;
 
-    void Awake()
-    {
+    void Awake() {
         Input.gyro.enabled = true;
 
         //Debug.Log("gyro interval = " + Input.gyro.updateInterval);
-        
+
         //Screen.orientation = ScreenOrientation.LandscapeRight;
     }
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start() {
+
+    }
+
+    // Update is called once per frame
+    void Update() {
         //Debug.Log("Acc " + Input.gyro.userAcceleration);
         //Debug.Log("gravity " + Input.gyro.gravity);
         //Debug.Log("att " + Input.gyro.attitude);
@@ -81,16 +80,17 @@ public class MotionDetect : MonoBehaviour {
                 }
                 Debug.LogWarning("SLASH! length = " + listLAcceYhistory.Count + "\tlowest = " + lowestY + "\tavg = " + (total / qty));
                 Attacking = false;
-                GameObject w = PhotonNetwork.Instantiate(this.waves.name, transform.position, Quaternion.identity, 0);
-                WaveSize ws;
-                if (avg < 2.0f) {
-                    ws = WaveSize.Weak;
-                } else if (avg < 3.0f) {
-                    ws = WaveSize.Mild;
-                } else {
-                    ws = WaveSize.Huge;
-                }
-                w.GetComponent<WaveMono>().SetupWave(ws);
+                //GameObject w = PhotonNetwork.Instantiate(this.waves.name, GameObject.FindGameObjectWithTag("Team1Player").transform.position, Quaternion.identity, 0);
+                //w.tag = "Team1Wave";
+                //WaveSize ws;
+                //if (avg < 2.0f) {
+                //    ws = WaveSize.Weak;
+                //} else if (avg < 3.0f) {
+                //    ws = WaveSize.Mild;
+                //} else {
+                //    ws = WaveSize.Huge;
+                //}
+                //w.GetComponent<WaveMono>().SetupWave(ws);
 
             } else {
                 if (listLAcceYhistory[listLAcceYhistory.Count - 1] != Input.gyro.userAcceleration.y)
@@ -121,6 +121,6 @@ public class MotionDetect : MonoBehaviour {
         //    isPreviousPassed = false;
         //}
 
-	}
+    }
 
 }

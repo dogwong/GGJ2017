@@ -1,0 +1,62 @@
+
+GGJ_C1.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BHand
+  rotate: false
+  xy: 723, 270
+  size: 45, 203
+  orig: 45, 203
+  offset: 0, 0
+  index: -1
+BLeg1
+  rotate: true
+  xy: 2, 2
+  size: 64, 366
+  orig: 64, 366
+  offset: 0, 0
+  index: -1
+FLeg1
+  rotate: true
+  xy: 2, 2
+  size: 64, 366
+  orig: 64, 366
+  offset: 0, 0
+  index: -1
+Bwing1
+  rotate: true
+  xy: 723, 120
+  size: 148, 56
+  orig: 148, 56
+  offset: 0, 0
+  index: -1
+Bwing2
+  rotate: false
+  xy: 770, 394
+  size: 135, 79
+  orig: 135, 79
+  offset: 0, 0
+  index: -1
+Bwing3
+  rotate: true
+  xy: 907, 394
+  size: 79, 83
+  orig: 79, 83
+  offset: 0, 0
+  index: -1
+FHand
+  rotate: true
+  xy: 370, 21
+  size: 45, 203
+  orig: 45, 203
+  offset: 0, 0
+  index: -1
+MainBody
+  rotate: true
+  xy: 2, 68
+  size: 405, 719
+  orig: 405, 719
+  offset: 0, 0
+  index: -1
