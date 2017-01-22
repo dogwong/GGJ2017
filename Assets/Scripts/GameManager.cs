@@ -6,11 +6,7 @@ public class GameManager : Photon.PunBehaviour {
 
     
     public static GameManager instance;
-    
 
-
-	public GameObject team1Player;
-	public GameObject team2Player;
 
 
     //public Transform[] spawnPoints;

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Launcher : Photon.PunBehaviour {
 
-	string _gameVersion = "1";
+	string _gameVersion = "3543";
 	public PhotonLogLevel Loglevel = PhotonLogLevel.Informational;
 	public GameObject controlPanel;
 	public GameObject progressLabel;
@@ -69,7 +69,7 @@ public class Launcher : Photon.PunBehaviour {
         if (PhotonNetwork.room.PlayerCount == 1)
 		{
 			Debug.Log("We load the 'Room for 1' ");
-			PhotonNetwork.LoadLevel("Level");
+			PhotonNetwork.LoadLevel("wave");
 		}
 	}
 }

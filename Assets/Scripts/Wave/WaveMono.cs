@@ -19,7 +19,7 @@ public class WaveMono : MonoBehaviour {
     public void SetupWave(WaveSize _waveSize)
     { 
         waveSize=_waveSize;
-        GetComponent<Rigidbody>().velocity =  transform.forward * -6; 
+        GetComponent<Rigidbody>().velocity =  transform.forward * 6; 
         //switch (waveSize)
         //{ 
             
@@ -31,6 +31,11 @@ public class WaveMono : MonoBehaviour {
         bool isTeamOne = tag == "Team1Wave";
         if ((isTeamOne && other.tag == "Team2Member")||(!isTeamOne&&other.tag=="Team1Member"))
         {
+            if (other.transform.parent.GetComponent<TouchJump>().CheckIsInvincible())
+            {
+                Debug.Log("Dodge");
+                return;
+            }
             Debug.Log("Hit opponent ");
             if (other.gameObject.GetComponent<Photon.MonoBehaviour>().photonView.isMine)
             {

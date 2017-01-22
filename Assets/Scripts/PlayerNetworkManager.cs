@@ -4,17 +4,20 @@ using System.Collections;
 public class PlayerNetworkManager : Photon.MonoBehaviour
 {
 
+	static public string action="null";
 
     void Awake()
     {
-        GameObject team1Camera = GameObject.FindGameObjectWithTag("Team1Camera");
-        GameObject team2Camera = GameObject.FindGameObjectWithTag("Team2Camera");
         if (photonView.isMine && (PhotonNetwork.player.ID == 1 || PhotonNetwork.player.ID == 3))
         {
             //team1Camera.GetComponent<AudioListener>().enabled = true;
             //team1Camera.GetComponent<GUILayer>().enabled = true;
             //team1Camera.GetComponent<FlareLayer>().enabled = true;
-            GetComponent<TouchJump>().enabled = true;
+			GetComponent<TouchJump>().enabled = true;
+			GameObject [] backs = GameObject.FindGameObjectsWithTag("Back");
+			for (int i=0; i<backs.Length; i++){
+				backs [i].GetComponent<MeshRenderer>().enabled = true;
+			}
         }
         else if (photonView.isMine && (PhotonNetwork.player.ID == 2 || PhotonNetwork.player.ID == 4))
         {
@@ -22,9 +25,17 @@ public class PlayerNetworkManager : Photon.MonoBehaviour
             //team2Camera.GetComponent<GUILayer>().enabled = true;
             //team2Camera.GetComponent<FlareLayer>().enabled = true;
             GetComponent<TouchJump>().enabled = true;
+			GameObject [] backs = GameObject.FindGameObjectsWithTag("Back");
+			for (int i=0; i<backs.Length; i++){
+				backs [i].GetComponent<MeshRenderer>().enabled = true;
+			}
         }
         else
         {
+			GameObject [] fronts = GameObject.FindGameObjectsWithTag("Front");
+			for (int i=0; i<fronts.Length; i++){
+				fronts [i].GetComponent<MeshRenderer>().enabled = true;
+			}
             StartCoroutine("UpdateData");
         }
     }
@@ -46,6 +57,7 @@ public class PlayerNetworkManager : Photon.MonoBehaviour
         {
             //transform.position = Vector3.Lerp(transform.position, position, Time.deltaTime * smoothing);
             //transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * smoothing);
+
             yield return null;
         }
     }
@@ -54,8 +66,8 @@ public class PlayerNetworkManager : Photon.MonoBehaviour
     {
         if (stream.isWriting)
         {
-            //stream.SendNext(transform.position);
-            //stream.SendNext(transform.rotation);
+			stream.SendNext(PhotonNetwork.playerName);
+            stream.SendNext(action);
             //stream.SendNext(health);
         }
         else

@@ -1,0 +1,67 @@
+
+astron.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+back_body
+  rotate: false
+  xy: 2, 2
+  size: 825, 908
+  orig: 825, 908
+  offset: 0, 0
+  index: -1
+
+astron2.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+B_leg
+  rotate: false
+  xy: 2, 2
+  size: 201, 360
+  orig: 201, 360
+  offset: 0, 0
+  index: -1
+F_hand
+  rotate: false
+  xy: 2, 364
+  size: 361, 613
+  orig: 361, 613
+  offset: 0, 0
+  index: -1
+F_leg
+  rotate: true
+  xy: 365, 30
+  size: 488, 424
+  orig: 488, 424
+  offset: 0, 0
+  index: -1
+gas
+  rotate: false
+  xy: 365, 520
+  size: 594, 457
+  orig: 594, 457
+  offset: 0, 0
+  index: -1
+tail
+  rotate: false
+  xy: 791, 106
+  size: 210, 412
+  orig: 210, 412
+  offset: 0, 0
+  index: -1
+
+astron3.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+B_hand
+  rotate: true
+  xy: 2, 2
+  size: 232, 443
+  orig: 232, 443
+  offset: 0, 0
+  index: -1
